@@ -3,6 +3,11 @@ variable "region" {
   description = "AWS Region"
 }
 
+variable "owner" {
+  default     = "Ioana"
+  description = "Owner name"
+}
+
 variable "cidr_block" {
   default     = "0.0.0.0/0"
   description = "CIDR Block for VPC"
@@ -33,17 +38,21 @@ variable "private_subnet_2_cidr" {
   description = "CIDR Block for Private Subnet 2"
 }
 
+variable "user_data_path" {
+  default     = "D:/terraform/Terraform_vpc_ec2/Ec2-VPC-TF/TerraformAWS/server-script.sh"
+  description = "Path for user_data"
+}
 variable "keyname" {
-  default     = "ioana-tfkey"
+  default     = "Ioana-ec2-key"
 }
 
 variable "instance_AMI"{
   default     = "ami-05ff5eaef6149df49"
-  description = "AMI EC2 instance - t3"
+  description = "AMI EC2 instance"
 }
 
 variable "ec2_user"{
-  default     = "ioana"
+  default     = "Ioana"
 }
 
 variable "instance_type" {
