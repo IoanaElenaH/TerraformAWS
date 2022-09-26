@@ -1,13 +1,3 @@
-terraform {
-  backend "s3" {
-    key        = "terraform/tfstate.tfstate"
-    bucket     = "state-files-for-terraform"
-    region     = "eu-central-1"
-    access_key = ""
-    secret_key = ""
-  }
-}
-
 resource "aws_vpc" "ioana-vpc" {
   cidr_block           = "${var.vpc_cidr}"
   enable_dns_hostnames = true
